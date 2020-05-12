@@ -1,0 +1,1634 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Reference</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen-fa2755b2.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print-bccf8c07.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all-c5541673.js"></script>
+  </head>
+
+  <body class="index" data-languages="[]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar-cad8cdcb.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo-efea78e2.png" class="logo" alt="Logo" />
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#headers" class="toc-h1 toc-link" data-title="Headers">Headers</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#content-type" class="toc-h2 toc-link" data-title="Content-Type">Content-Type</a>
+                  </li>
+                  <li>
+                    <a href="#ba-sso-authenticity" class="toc-h2 toc-link" data-title="ba-sso-authenticity">ba-sso-authenticity</a>
+                  </li>
+                  <li>
+                    <a href="#cookie" class="toc-h2 toc-link" data-title="cookie">cookie</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#supported-odata-query-options" class="toc-h1 toc-link" data-title="Supported OData query options">Supported OData query options</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#expand" class="toc-h2 toc-link" data-title="$expand">$expand</a>
+                  </li>
+                  <li>
+                    <a href="#filter" class="toc-h2 toc-link" data-title="$filter">$filter</a>
+                  </li>
+                  <li>
+                    <a href="#select" class="toc-h2 toc-link" data-title="$select">$select</a>
+                  </li>
+                  <li>
+                    <a href="#top" class="toc-h2 toc-link" data-title="$top">$top</a>
+                  </li>
+                  <li>
+                    <a href="#skip" class="toc-h2 toc-link" data-title="$skip">$skip</a>
+                  </li>
+                  <li>
+                    <a href="#orderby" class="toc-h2 toc-link" data-title="$orderby">$orderby</a>
+                  </li>
+                  <li>
+                    <a href="#operators" class="toc-h2 toc-link" data-title="Operators">Operators</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#post-requests" class="toc-h1 toc-link" data-title="POST requests">POST requests</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#creating-a-folder" class="toc-h2 toc-link" data-title="Creating a folder">Creating a folder</a>
+                  </li>
+                  <li>
+                    <a href="#creating-a-dashboard" class="toc-h2 toc-link" data-title="Creating a dashboard">Creating a dashboard</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#get-requests" class="toc-h1 toc-link" data-title="GET requests">GET requests</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-asset-from-an-id" class="toc-h2 toc-link" data-title="Get asset from an ID">Get asset from an ID</a>
+                  </li>
+                  <li>
+                    <a href="#get-asset-and-expand-content-from-an-id" class="toc-h2 toc-link" data-title="Get asset and expand content from an ID">Get asset and expand content from an ID</a>
+                  </li>
+                  <li>
+                    <a href="#get-asset-using-a-path" class="toc-h2 toc-link" data-title="Get asset using a path">Get asset using a path</a>
+                  </li>
+                  <li>
+                    <a href="#get-asset-and-content-using-a-path" class="toc-h2 toc-link" data-title="Get asset and content using a path">Get asset and content using a path</a>
+                  </li>
+                  <li>
+                    <a href="#get-assets-of-a-folder" class="toc-h2 toc-link" data-title="Get assets of a folder">Get assets of a folder</a>
+                  </li>
+                  <li>
+                    <a href="#get-and-filter-children-assets-of-a-folder" class="toc-h2 toc-link" data-title="Get and filter children assets of a folder">Get and filter children assets of a folder</a>
+                  </li>
+                  <li>
+                    <a href="#get-filter-and-select-assets" class="toc-h2 toc-link" data-title="Get, filter, and select assets">Get, filter, and select assets</a>
+                  </li>
+                  <li>
+                    <a href="#get-filter-select-and-expand-assets" class="toc-h2 toc-link" data-title="Get, filter, select, and expand assets">Get, filter, select, and expand assets</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#del-requests" class="toc-h1 toc-link" data-title="DEL requests">DEL requests</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#delete-an-asset-by-id" class="toc-h2 toc-link" data-title="Delete an asset by ID">Delete an asset by ID</a>
+                  </li>
+                  <li>
+                    <a href="#delete-an-asset-by-path" class="toc-h2 toc-link" data-title="Delete an asset by path">Delete an asset by path</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#put-requests" class="toc-h1 toc-link" data-title="PUT requests">PUT requests</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#update-an-asset-using-the-asset-id-and-type" class="toc-h2 toc-link" data-title="Update an asset using the asset ID and type">Update an asset using the asset ID and type</a>
+                  </li>
+              </ul>
+          </li>
+      </ul>
+        <ul class="toc-footer">
+            <li><a href='https://www.ibm.com/support/knowledgecenter/SSD29G_2.0.0/main/welcome.html'>Full Planning Analytics documentation</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>Introduction</h1>
+<p>The IBM Planning Analytics Content Services API can be used to create, retrieve, delete, or update assets in IBM Planning Analytics Workspace.</p>
+<h1 id='headers'>Headers</h1>
+<p>To use the Planning Analytics Content Services API, include the following headers in your requests.</p>
+<h2 id='content-type'>Content-Type</h2>
+<p>Use <code>application/json</code> when making requests to the Planning Analytics Content Services API.</p>
+<h2 id='ba-sso-authenticity'>ba-sso-authenticity</h2>
+<p>The <code>ba-sso-authenticity</code> is the Business Analytics single sign-on authentication value. The value can be found in your cookies, under the name <code>ba-sso-csrf</code>.</p>
+<h2 id='cookie'>cookie</h2>
+<blockquote>
+<p>Example of the redirect javascript:</p>
+</blockquote>
+<pre class="highlight html"><code><span class="nt">&lt;html&gt;</span>
+    <span class="nt">&lt;head&gt;</span>
+        <span class="nt">&lt;script&gt;</span>
+            <span class="nb">document</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">replace</span> <span class="o">|</span> <span class="nx">GET</span> <span class="nx">THIS</span> <span class="nx">EXAMPLE</span> <span class="nx">FROM</span> <span class="nx">JACKSON</span>
+        <span class="nt">&lt;/script&gt;</span>
+    <span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre>
+<p>The <code>cookie</code> is the client-side cookie for Planning Analytics Workspace. Cookies must be defined, otherwise your request will not be authenticated. You can use a javascript file to redirect you to the login page. After you log in, your cookies will be set in the browser. </p>
+
+<p>The value can be found in your cookies, by combining <code>wa-current-userid</code>, <code>ba-sso-csrf</code> and <code>paSession</code>.</p>
+
+<p>For example:</p>
+
+<p><code>wa-current-userid=N9UFBGNPY8HO; ba-sso-csrf=Y7YjUGVYot+5eZZW9KFyqnMXa0s=; paSession=s%3A2wglGfmeBaX4CIawGqRSO1aUTDrs4ytD.dH7HqmL8uhH%2B%2Bz4jq6zVkaxGlZ1%2FMWQVBBqHllu3wJY</code></p>
+<blockquote>
+<p>Example:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dashboard"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example_name"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/shared"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"example_content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"content"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"custom_properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"score"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>The Planning Analytics Content Service API accepts and returns requests in JSON. You can use the following parameters when sending POST and PUT requests.</p>
+
+<table><thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>type</td>
+<td>The asset type.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>The asset name</td>
+</tr>
+<tr>
+<td>path</td>
+<td>The asset path</td>
+</tr>
+<tr>
+<td>content</td>
+<td>Lorem ipsum</td>
+</tr>
+</tbody></table>
+
+<p>custom_properties Lorem ipsum</p>
+<h1 id='supported-odata-query-options'>Supported OData query options</h1>
+<p>The Planning Analytics Content Services API supports several OData query options. These query options can be used to refine your requests.</p>
+<h2 id='expand'>$expand</h2>
+<p>You can use <code>$expand</code> to expand a folder asset. If you have a folder asset and you want to read the children assets of that folder, <code>$expand</code> will return the children assets of that folder.</p>
+
+<p>The <code>$expand</code> option can also be used if you want to view the contents of an asset, such as a dashboard.</p>
+
+<p>For example, <code>http://localhost:1338/pacontent/v1/Assets(&#39;94d80e2b-8285-4926-9d37-08f5f32f9b68&#39;)?$expand=content</code> expands and returns the <code>content</code> property from the asset.</p>
+<h2 id='filter'>$filter</h2>
+<p>You can use <code>$filter</code> with an operator to filter the retrieved JSON properties. <code>$filter</code> can only be used with <code>$expand</code> for expanded assets.</p>
+
+<p>For example, <code>$filter=name eq finance</code> returns only assets with <code>finance</code> in the <code>name</code> property.</p>
+
+<p><code>http://localhost:1338/pacontent/v1/Assets(path=&#39;%252fshared%252fdemo&#39;)?$expand=Assets($expand=content;$filter=name eq &#39;demo&#39;)</code> filters the expanded content based on if the asset contains a <code>name</code> property that is equal to the <code>demo</code> value.</p>
+<h2 id='select'>$select</h2>
+<p>You can use <code>$select</code> to select an asset with a certain property in your requests. The <code>$select</code> option can be used with <code>$expand</code> and in the URL query.</p>
+
+<p>For example, <code>$select=name</code> returns only assets with the <code>name</code> property.</p>
+<h2 id='top'>$top</h2>
+<p>You can use <code>$top</code> to define the number of assets that you want returned, when returning an array.</p>
+
+<p>For example, <code>$top=10</code> returns the first 10 assets in an array.</p>
+<h2 id='skip'>$skip</h2>
+<p>You can use <code>$skip</code> to define the number of assets to skip when an array of assets is returned from within a folder.</p>
+
+<p>For example, <code>$skip=3</code> skips the first 3 assets in an array.</p>
+<h2 id='orderby'>$orderby</h2>
+<p>You can use <code>$orderby</code> to define how you want your assets to be ordered when an array is returned.</p>
+
+<p>For example, <code>$orderby=name</code> orders the returned assets by the <code>name</code> property and alphabetically.</p>
+<h2 id='operators'>Operators</h2>
+<p>The following are operators that you can use with the <code>$filter</code> and <code>$select</code> options:</p>
+
+<table><thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>eq</td>
+<td>The <code>eq</code> operator returns true if the left operand is equal to the right operand, otherwise it returns false.</td>
+</tr>
+<tr>
+<td>ne</td>
+<td>The <code>ne</code> operator returns true if the left operand is not equal to the right operand, otherwise it returns false.</td>
+</tr>
+<tr>
+<td>gt</td>
+<td>The <code>gt</code> operator returns true if the left operand is greater than the right operand, otherwise it returns false.</td>
+</tr>
+<tr>
+<td>ge</td>
+<td>The <code>ge</code> operator returns true if the left operand is greater than or equal to the right operand, otherwise it returns false.</td>
+</tr>
+<tr>
+<td>lt</td>
+<td>The <code>lt</code> operator returns true if the left operand is less than the right operand, otherwise it returns false.</td>
+</tr>
+<tr>
+<td>le</td>
+<td>The <code>le</code> operator returns true if the left operand is less than or equal to the right operand, otherwise it returns false.</td>
+</tr>
+<tr>
+<td>and</td>
+<td>The <code>and</code> operator returns true if both the left and right operands evaluate to true, otherwise it returns false.</td>
+</tr>
+<tr>
+<td>or</td>
+<td>The <code>or</code> operator returns false if both the left and right operands both evaluate to false, otherwise it returns true.</td>
+</tr>
+<tr>
+<td>not</td>
+<td>The <code>not</code> operator returns true if the operand returns false, otherwise it returns false.</td>
+</tr>
+<tr>
+<td>has</td>
+<td>The <code>has</code> operator returns true if the right operand is an enumeration value whose flag(s) are set on the left operand.</td>
+</tr>
+<tr>
+<td>in</td>
+<td>The <code>in</code> operator returns true if the left operand is a member of the right operand. The right operand MUST be either a comma-separated list of primitive values, enclosed in parentheses, or a single expression that resolves to a collection.</td>
+</tr>
+</tbody></table>
+<h1 id='post-requests'>POST requests</h1>
+<p>You can use POST requests to send data to the Planning Analytics server and create assets in Planning Analytics Workspace.</p>
+<h2 id='creating-a-folder'>Creating a folder</h2>
+<blockquote>
+<p>Example of the syntax:</p>
+</blockquote>
+<pre class="highlight html tab-html"><code>http://localhost:1338/pacontent/v1/Assets
+</code></pre>
+<p>You can use a POST request to create a new folder in a path that you define.</p>
+<h3 id='syntax'>Syntax</h3>
+<p><code>http://&lt;Planning Analytics Workspace server URL&gt;:&lt;port number&gt;/pacontent/v1/Assets</code></p>
+
+<table><thead>
+<tr>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Planning Analytics Workspace server URL</td>
+<td>The URL for the Planning Analytics Workspace server that your asset is located in.</td>
+</tr>
+<tr>
+<td>Port number</td>
+<td>The port number used for your server URL.</td>
+</tr>
+</tbody></table>
+<h3 id='body'>Body</h3>
+<blockquote>
+<p>Example of the JSON request body</p>
+</blockquote>
+<pre class="highlight plaintext"><code>{
+    "type": "folder",
+    "path": "/shared",
+    "name": "demo"
+}
+</code></pre>
+<p>In this example, the request is using the following keys:</p>
+
+<table><thead>
+<tr>
+<th>Key name</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>type</td>
+<td>The type of asset that you want to create.</td>
+</tr>
+<tr>
+<td>path</td>
+<td>The path where you want your asset to be created in.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>The name that you want to give your asset.</td>
+</tr>
+</tbody></table>
+<h3 id='result'>Result</h3>
+<blockquote>
+<p>Example of a response from a successful request</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"@odata.context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://harmonydev21.fyre.ibm.com:1338/v1/$metadata#Assets/$entity"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"@odata.id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://harmonydev21.fyre.ibm.com:1338/v1/Assets('46aabf88-bdf2-4b1d-a150-00e31ef804ea')"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"@odata.editLink"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://harmonydev21.fyre.ibm.com:1338/v1/Assets('46aabf88-bdf2-4b1d-a150-00e31ef804ea')"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"46aabf88-bdf2-4b1d-a150-00e31ef804ea"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"demo"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/shared/demo"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"folder"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c#info"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"valid"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"system_properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-05-12T18:54:40.472Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d39c9bbe4b0e222859a1452"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_user_pretty_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Admin"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"modified_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-05-12T18:54:40.472Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"modified_user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d39c9bbe4b0e222859a1452"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"modified_user_pretty_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Admin"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"used_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-05-12T18:54:40.472Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"used_user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d39c9bbe4b0e222859a1452"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"used_user_pretty_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Admin"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"permissions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"open"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"write"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"manage"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"secure"</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"dynamic_properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"delete_link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"idvisualizations/c/v2/content/folder/46aabf88-bdf2-4b1d-a150-00e31ef804ea/"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"thumbnail_link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"idvisualizations/c/v2/attachment/folder/46aabf88-bdf2-4b1d-a150-00e31ef804ea/?name=thumbnail"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"custom_properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>A new folder is created.</p>
+<h2 id='creating-a-dashboard'>Creating a dashboard</h2>
+<blockquote>
+<p>Example of the syntax:</p>
+</blockquote>
+<pre class="highlight html tab-html"><code>http://localhost:1338/pacontent/v1/Assets
+</code></pre>
+<p>You can use a POST request to create a new dashboard in a path that you define. </p>
+<h3 id='syntax-2'>Syntax</h3>
+<p><code>http://&lt;Planning Analytics Workspace server URL&gt;:&lt;port number&gt;/pacontent/v1/Assets</code></p>
+<h3 id='body-2'>Body</h3>
+<blockquote>
+<p>Example of the JSON request body</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dashboard"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"demo"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/shared"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6.0"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"C"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"useSpec"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"dataSource"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"querySubject"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"filter"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"calculation"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>In this example, the request is using the following keys:</p>
+
+<table><thead>
+<tr>
+<th>Key name</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>type</td>
+<td>The type of asset that you want to create.</td>
+</tr>
+<tr>
+<td>path</td>
+<td>The path where you want your asset to be created in.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>The name that you want to give your asset.</td>
+</tr>
+<tr>
+<td>content</td>
+<td>The specifications for the asset that you are creating.</td>
+</tr>
+</tbody></table>
+
+<aside class="note">
+Note: The `content` key and values are required to create a dashboard.
+</aside>
+<h3 id='result-2'>Result</h3>
+<blockquote>
+<p>Example of a response from a successful request</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"@odata.context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://harmonydev21.fyre.ibm.com:1338/v1/$metadata#Assets/$entity"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"@odata.id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://harmonydev21.fyre.ibm.com:1338/v1/Assets('0985d8bf-6fb2-42d8-a31d-5a312f43e18c')"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"@odata.editLink"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://harmonydev21.fyre.ibm.com:1338/v1/Assets('0985d8bf-6fb2-42d8-a31d-5a312f43e18c')"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0985d8bf-6fb2-42d8-a31d-5a312f43e18c"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"demo"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/shared/demo"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dashboard"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c#info"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"valid"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"system_properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-05-12T19:02:37.414Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d39c9bbe4b0e222859a1452"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_user_pretty_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Admin"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"modified_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-05-12T19:02:37.414Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"modified_user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d39c9bbe4b0e222859a1452"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"modified_user_pretty_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Admin"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"used_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-05-12T19:02:37.414Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"used_user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d39c9bbe4b0e222859a1452"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"used_user_pretty_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Admin"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"permissions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"open"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"write"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"manage"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"secure"</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"dynamic_properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"delete_link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"idvisualizations/c/v2/content/dashboard/0985d8bf-6fb2-42d8-a31d-5a312f43e18c/"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"thumbnail_link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"idvisualizations/c/v2/attachment/dashboard/0985d8bf-6fb2-42d8-a31d-5a312f43e18c/?name=thumbnail"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"custom_properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>A new dashboard is created.</p>
+<h1 id='get-requests'>GET requests</h1>
+<p>You can use GET requests to retrieve metadata about an asset in Planning Analytics Workspace.</p>
+<h2 id='get-asset-from-an-id'>Get asset from an ID</h2>
+<blockquote>
+<p>Example of the syntax:</p>
+</blockquote>
+<pre class="highlight html tab-html"><code>http://localhost:1338/pacontent/v1/Assets('0985d8bf-6fb2-42d8-a31d-5a312f43e18c')
+</code></pre>
+<p>This GET request uses the asset ID to retrieve and return the metadata from the asset from the server.</p>
+<h3 id='syntax'>Syntax</h3>
+<p><code>http://&lt;Planning Analytics Workspace server URL&gt;:&lt;port number&gt;/pacontent/v1/Assets(&#39;&lt;asset ID&gt;&#39;)</code></p>
+
+<table><thead>
+<tr>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Planning Analytics Workspace server URL</td>
+<td>The URL for the Planning Analytics Workspace server that your asset is located in.</td>
+</tr>
+<tr>
+<td>Port number</td>
+<td>The port number used for your server URL.</td>
+</tr>
+<tr>
+<td>Asset ID</td>
+<td>The ID for the asset.</td>
+</tr>
+</tbody></table>
+<h3 id='result'>Result</h3>
+<blockquote>
+<p>Example of the metadata retrieved</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"@odata.context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:1338/v1/$metadata#Assets/$entity"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"@odata.id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:1338/v1/Assets('0985d8bf-6fb2-42d8-a31d-5a312f43e18c')"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"@odata.editLink"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:1338/v1/Assets('0985d8bf-6fb2-42d8-a31d-5a312f43e18c')"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0985d8bf-6fb2-42d8-a31d-5a312f43e18c"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"demo"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/shared/demo"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dashboard"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c#info"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"valid"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"system_properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-05-12T19:02:37.414Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d39c9bbe4b0e222859a1452"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_user_pretty_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Admin"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"modified_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-05-12T19:02:37.414Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"modified_user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d39c9bbe4b0e222859a1452"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"modified_user_pretty_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Admin"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"used_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-05-12T19:02:37.414Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"used_user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d39c9bbe4b0e222859a1452"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"used_user_pretty_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Admin"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"permissions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"open"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"write"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"manage"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"secure"</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"dynamic_properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"delete_link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"idvisualizations/r/v2/content/shared/demo/"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"thumbnail_link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"idvisualizations/r/v2/attachment/shared/demo/?name=thumbnail"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"custom_properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>The metadata for the asset is returned.</p>
+
+<aside class="note">
+Note: If you want the `content` that is stored inside of the asset, you need to include the OData $expand query parameter.
+</aside>
+<h2 id='get-asset-and-expand-content-from-an-id'>Get asset and expand content from an ID</h2>
+<blockquote>
+<p>Example of the syntax:</p>
+</blockquote>
+<pre class="highlight html tab-html"><code>http://localhost:1338/pacontent/v1/Assets('0985d8bf-6fb2-42d8-a31d-5a312f43e18c')?$expand=content
+</code></pre>
+<p>This GET request uses the asset ID to retrieve the asset metadata and also the content of the asset.</p>
+<h3 id='syntax-2'>Syntax</h3>
+<p><code>http://&lt;Planning Analytics Workspace server URL&gt;:&lt;port number&gt;/pacontent/v1/Assets(&#39;&lt;asset ID&gt;&#39;)?$expand=content</code></p>
+
+<table><thead>
+<tr>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Planning Analytics Workspace server URL</td>
+<td>The URL for the Planning Analytics Workspace server that your asset is located in.</td>
+</tr>
+<tr>
+<td>Port number</td>
+<td>The port number used for your server URL.</td>
+</tr>
+<tr>
+<td>Asset ID</td>
+<td>The ID for the asset.</td>
+</tr>
+</tbody></table>
+<h3 id='result-2'>Result</h3>
+<blockquote>
+<p>Example of the asset metadata and content retrieved</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"@odata.context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:1338/v1/$metadata#Assets/$entity"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"@odata.id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:1338/v1/Assets('0985d8bf-6fb2-42d8-a31d-5a312f43e18c')"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"@odata.editLink"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:1338/v1/Assets('0985d8bf-6fb2-42d8-a31d-5a312f43e18c')"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0985d8bf-6fb2-42d8-a31d-5a312f43e18c"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"demo"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/shared/demo"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dashboard"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c#info"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"valid"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"system_properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-05-12T19:02:37.414Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d39c9bbe4b0e222859a1452"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_user_pretty_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Admin"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"modified_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-05-12T19:02:37.414Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"modified_user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d39c9bbe4b0e222859a1452"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"modified_user_pretty_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Admin"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"used_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-05-12T19:02:37.414Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"used_user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d39c9bbe4b0e222859a1452"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"used_user_pretty_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Admin"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"permissions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"open"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"write"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"manage"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"secure"</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"dynamic_properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"delete_link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"idvisualizations/r/v2/content/shared/demo/"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"thumbnail_link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"idvisualizations/r/v2/attachment/shared/demo/?name=thumbnail"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"custom_properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+    </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"C"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"filter"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"calculation"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"querySubject"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6.0"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"dataSource"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"useSpec"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h2 id='get-asset-using-a-path'>Get asset using a path</h2>
+<blockquote>
+<p>Example of the syntax:</p>
+</blockquote>
+<pre class="highlight html tab-html"><code>http://localhost:1338/pacontent/v1/Assets(path='%252fshared%252fdemo')
+</code></pre>
+<p>This GET requests uses the path of the asset to retrieve asset data. Using the path is useful if you&#39;re unsure about what the ID of the asset is. </p>
+<h3 id='syntax-3'>Syntax</h3>
+<p><code>http://&lt;Planning Analytics Workspace server URL&gt;:&lt;port number&gt;/pacontent/v1/Assets(path=&#39;&lt;path of the asset&gt;&#39;)</code></p>
+
+<table><thead>
+<tr>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Planning Analytics Workspace server URL</td>
+<td>The URL for the Planning Analytics Workspace server that your asset is located in.</td>
+</tr>
+<tr>
+<td>Port number</td>
+<td>The port number used for your server URL.</td>
+</tr>
+<tr>
+<td>Asset ID</td>
+<td>The ID for the asset.</td>
+</tr>
+<tr>
+<td>Asset path</td>
+<td>The path of asset.</td>
+</tr>
+</tbody></table>
+
+<aside class="note">
+Note: The path of your asset must be URL encoded twice.
+</aside>
+<h3 id='result-3'>Result</h3>
+<blockquote>
+<p>Example of the asset retrieved</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"@odata.context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:1338/v1/$metadata#Assets/$entity"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"@odata.id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:1338/v1/Assets('0985d8bf-6fb2-42d8-a31d-5a312f43e18c')"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"@odata.editLink"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:1338/v1/Assets('0985d8bf-6fb2-42d8-a31d-5a312f43e18c')"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0985d8bf-6fb2-42d8-a31d-5a312f43e18c"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"demo"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/shared/demo"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dashboard"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c#info"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"valid"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"system_properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-05-12T19:02:37.414Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d39c9bbe4b0e222859a1452"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_user_pretty_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Admin"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"modified_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-05-12T19:02:37.414Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"modified_user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d39c9bbe4b0e222859a1452"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"modified_user_pretty_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Admin"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"used_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-05-12T19:15:36.401Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"used_user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d39c9bbe4b0e222859a1452"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"used_user_pretty_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Admin"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"permissions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"open"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"write"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"manage"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"secure"</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"dynamic_properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"delete_link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"idvisualizations/r/v2/content/shared/demo/"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"thumbnail_link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"idvisualizations/r/v2/attachment/shared/demo/?name=thumbnail"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"custom_properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>The asset is retrieved using the path of the asset.</p>
+<h2 id='get-asset-and-content-using-a-path'>Get asset and content using a path</h2>
+<blockquote>
+<p>Example of the syntax:</p>
+</blockquote>
+<pre class="highlight html tab-html"><code>http://localhost:1338/pacontent/v1/Assets(path='shared%252Fdemo')?$expand=content
+</code></pre><h3 id='syntax-4'>Syntax</h3>
+<p><code>http://&lt;Planning Analytics Workspace server URL&gt;:&lt;port number&gt;/pacontent/v1/Assets(path=&#39;&lt;path of the asset&gt;&#39;)?$expand=content</code></p>
+
+<table><thead>
+<tr>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Planning Analytics Workspace server URL</td>
+<td>The URL for the Planning Analytics Workspace server that your asset is located in.</td>
+</tr>
+<tr>
+<td>Port number</td>
+<td>The port number used for your server URL.</td>
+</tr>
+<tr>
+<td>Asset path</td>
+<td>The path of asset.</td>
+</tr>
+</tbody></table>
+
+<aside class="note">
+Note: The path of your asset must be URL encoded twice.
+</aside>
+<h3 id='result-4'>Result</h3>
+<blockquote>
+<p>Example of the asset metadata and content retrieved</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"@odata.context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:1338/v1/$metadata#Assets/$entity"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"@odata.id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:1338/v1/Assets('0985d8bf-6fb2-42d8-a31d-5a312f43e18c')"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"@odata.editLink"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:1338/v1/Assets('0985d8bf-6fb2-42d8-a31d-5a312f43e18c')"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0985d8bf-6fb2-42d8-a31d-5a312f43e18c"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"demo"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/shared/demo"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dashboard"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c#info"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"valid"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"system_properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-05-12T19:02:37.414Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d39c9bbe4b0e222859a1452"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_user_pretty_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Admin"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"modified_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-05-12T19:02:37.414Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"modified_user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d39c9bbe4b0e222859a1452"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"modified_user_pretty_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Admin"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"used_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-05-12T19:15:36.401Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"used_user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d39c9bbe4b0e222859a1452"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"used_user_pretty_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Admin"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"permissions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"open"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"write"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"manage"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"secure"</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"dynamic_properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"delete_link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"idvisualizations/r/v2/content/shared/demo/"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"thumbnail_link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"idvisualizations/r/v2/attachment/shared/demo/?name=thumbnail"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"custom_properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+    </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"C"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"filter"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"calculation"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"querySubject"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6.0"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"dataSource"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"useSpec"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>The asset metadata and content is retrieved using the asset path.</p>
+<h2 id='get-assets-of-a-folder'>Get assets of a folder</h2>
+<blockquote>
+<p>Example of the syntax:</p>
+</blockquote>
+<pre class="highlight html tab-html"><code>http://localhost:1338/pacontent/v1/Assets(path='%252fshared')/Assets
+</code></pre>
+<p>This GET request retrieves the children assets of a folder.</p>
+<h3 id='syntax-5'>Syntax</h3>
+<p><code>http://&lt;Planning Analytics Workspace server URL&gt;:&lt;port number&gt;/pacontent/v1/Assets(path=&#39;&lt;folder path&gt;&#39;)/Assets</code></p>
+
+<table><thead>
+<tr>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Planning Analytics Workspace server URL</td>
+<td>The URL for the Planning Analytics Workspace server that your asset is located in.</td>
+</tr>
+<tr>
+<td>Port number</td>
+<td>The port number used for your server URL.</td>
+</tr>
+<tr>
+<td>Folder path</td>
+<td>The path of the folder where your assets are located in.</td>
+</tr>
+</tbody></table>
+
+<aside class="note">
+Note: The path of your folder must be URL encoded twice.
+</aside>
+<h3 id='result-5'>Result</h3>
+<blockquote>
+<p>Example of the assets within a folder being retrieved</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"@odata.context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:1338/v1/$metadata#Assets('/shared')/Assets"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+       </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"@odata.id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:1338/v1/Assets('3edf76f6-7b09-40cf-a467-47b8f55eec15')"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"@odata.editLink"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:1338/v1/Assets('3edf76f6-7b09-40cf-a467-47b8f55eec15')"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3edf76f6-7b09-40cf-a467-47b8f55eec15"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"revenue_2020"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/shared/revenue_2020"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dashboard"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c#info"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"valid"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"system_properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-09-19T16:33:12.318Z"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"created_user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d39c9bbe4b0e222859a1452"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"created_user_pretty_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Admin"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"modified_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-09-19T16:33:12.318Z"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"modified_user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d39c9bbe4b0e222859a1452"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"modified_user_pretty_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Admin"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"used_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-04-15T13:23:15.889Z"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"used_user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d39c9bbe4b0e222859a1452"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"used_user_pretty_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Admin"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"permissions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"open"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"write"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"manage"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"secure"</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"dynamic_properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"delete_link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"idvisualizations/r/v2/content/shared/yy-empty/"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"thumbnail_link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"idvisualizations/r/v2/attachment/shared/yy-empty/?name=thumbnail"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"custom_properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"@odata.id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:1338/v1/Assets('1773db5b-972a-424f-a9a5-be49af5ec137')"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"@odata.editLink"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:1338/v1/Assets('1773db5b-972a-424f-a9a5-be49af5ec137')"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1773db5b-972a-424f-a9a5-be49af5ec137"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"finance_2020"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/shared/finance_2020"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dashboard"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c#info"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"valid"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"system_properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-08-08T17:37:31.050Z"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"created_user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d39c9bbe4b0e222859a1452"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"created_user_pretty_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Admin"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"modified_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-08-08T17:37:31.050Z"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"modified_user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d39c9bbe4b0e222859a1452"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"modified_user_pretty_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Admin"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"used_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-04-15T14:50:01.768Z"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"used_user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d39c9bbe4b0e222859a1452"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"used_user_pretty_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Admin"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"permissions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"open"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"write"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"manage"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"secure"</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"dynamic_properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"delete_link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"idvisualizations/r/v2/content/shared/yy-plansample/"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"thumbnail_link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"idvisualizations/r/v2/attachment/shared/yy-plansample/?name=thumbnail"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"custom_properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"@odata.id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:1338/v1/Assets('f6b71c40-ca1b-4a38-b167-8f8fa1359949')"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"@odata.editLink"</span><span class="p">:</span><span class="w"> </span><span class="s2">"localhost:1338/v1/Assets('f6b71c40-ca1b-4a38-b167-8f8fa1359949')"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"f6b71c40-ca1b-4a38-b167-8f8fa1359949"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"finance_2019"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/shared/finance_2019"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dashboard"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c#info"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"valid"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"system_properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-04-08T20:48:10.654Z"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"created_user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d39c9bbe4b0e222859a1452"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"created_user_pretty_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Admin"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"modified_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-04-08T20:48:10.654Z"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"modified_user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d39c9bbe4b0e222859a1452"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"modified_user_pretty_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Admin"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"used_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-05-12T14:55:01.980Z"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"used_user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d39c9bbe4b0e222859a1452"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"used_user_pretty_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Admin"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"permissions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"open"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"write"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"manage"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"secure"</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"dynamic_properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"delete_link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"idvisualizations/r/v2/content/shared/%EB%A6%AC%EB%84%A4%EC%83%A4%EB%AF%BC%EA%B8%B0%EC%88%98/"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"thumbnail_link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"idvisualizations/r/v2/attachment/shared/%EB%A6%AC%EB%84%A4%EC%83%A4%EB%AF%BC%EA%B8%B0%EC%88%98/?name=thumbnail"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"custom_properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Children assets of the folder are listed in an array under <code>value</code>.</p>
+<h2 id='get-and-filter-children-assets-of-a-folder'>Get and filter children assets of a folder</h2>
+<blockquote>
+<p>Example of the syntax:</p>
+</blockquote>
+<pre class="highlight html tab-html"><code>http://localhost:1338/pacontent/v1/Assets(path='%252fshared')?$expand=Assets($expand=content;$filter=name eq 'demo')
+</code></pre>
+<p>This GET request retrieves and filters the children assets of a folder.</p>
+<h3 id='syntax-6'>Syntax</h3>
+<p>The following is the syntax for retrieving an asset from the asset ID:</p>
+
+<p><code>http://&lt;Planning Analytics Workspace server URL&gt;:&lt;port number&gt;/pacontent/v1/Assets(path=&#39;&lt;folder path&gt;&#39;)?$expand=Assets($expand=content;$filter=&lt;filter type&gt; &lt;filter condition&gt; &#39;&lt;filter value&gt;&#39;)</code></p>
+
+<table><thead>
+<tr>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Planning Analytics Workspace server URL</td>
+<td>The URL for the Planning Analytics Workspace server that your asset is located in.</td>
+</tr>
+<tr>
+<td>Port number</td>
+<td>The port number used for your server URL.</td>
+</tr>
+<tr>
+<td>Folder path</td>
+<td>The path of the folder where your assets are located in.</td>
+</tr>
+<tr>
+<td>Filter type</td>
+<td>The type of data that you want to filter the children by.</td>
+</tr>
+<tr>
+<td>Filter condition</td>
+<td>Set to <code>eq</code> to filter the children based on the <code>equals</code> filter condition.</td>
+</tr>
+<tr>
+<td>Filter value</td>
+<td>The value that you want to filter the children on.</td>
+</tr>
+</tbody></table>
+
+<aside class="note">
+Note: The path of your folder must be URL encoded twice.
+</aside>
+<h3 id='result-6'>Result</h3>
+<blockquote>
+<p>Example of a response from a successful request</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"@odata.context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:1338/v1/$metadata#Assets/$entity"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"@odata.id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:1338/v1/Assets('c2c24d17-8abb-478e-a2e5-c2853cdae81a')"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"@odata.editLink"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:1338/v1/Assets('c2c24d17-8abb-478e-a2e5-c2853cdae81a')"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c2c24d17-8abb-478e-a2e5-c2853cdae81a"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"shared"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/shared"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"folder"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c#info"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"valid"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"system_properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-07-25T15:24:42.304Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_user_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_user_pretty_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"modified_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-07-25T15:24:42.304Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"modified_user_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"modified_user_pretty_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"used_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-07-25T15:24:42.304Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"used_user_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"used_user_pretty_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"permissions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"open"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"write"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"manage"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"secure"</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"dynamic_properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"delete_link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"idvisualizations/r/v2/content/shared/"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"thumbnail_link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"idvisualizations/r/v2/attachment/shared/?name=thumbnail"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"custom_properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"NATURE"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SYSTEM"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"WA_PRO_READY"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"Assets"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"@odata.id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:1338/v1/Assets('0985d8bf-6fb2-42d8-a31d-5a312f43e18c')"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"@odata.editLink"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:1338/v1/Assets('0985d8bf-6fb2-42d8-a31d-5a312f43e18c')"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0985d8bf-6fb2-42d8-a31d-5a312f43e18c"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"demo"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/shared/demo"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dashboard"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c#info"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"valid"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"system_properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-05-12T19:02:37.414Z"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"created_user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d39c9bbe4b0e222859a1452"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"created_user_pretty_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Admin"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"modified_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-05-12T19:02:37.414Z"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"modified_user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d39c9bbe4b0e222859a1452"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"modified_user_pretty_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Admin"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"used_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-05-12T19:34:33.742Z"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"used_user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d39c9bbe4b0e222859a1452"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"used_user_pretty_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Admin"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"permissions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"open"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"write"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"manage"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"secure"</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"dynamic_properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"delete_link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"idvisualizations/r/v2/content/shared/demo/"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"thumbnail_link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"idvisualizations/r/v2/attachment/shared/demo/?name=thumbnail"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"custom_properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+            </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"C"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"filter"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+                </span><span class="s2">"calculation"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+                </span><span class="s2">"querySubject"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+                </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6.0"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"dataSource"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+                </span><span class="s2">"useSpec"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h2 id='get-filter-and-select-assets'>Get, filter, and select assets</h2>
+<blockquote>
+<p>Example of the syntax:</p>
+</blockquote>
+<pre class="highlight html tab-html"><code>http://localhost:1338/pacontent/v1/Assets(path='%252Fshared')?$expand=Assets($select=name;$filter=name eq 'demo')<span class="err">&amp;</span>$select=name
+</code></pre>
+<p>This GET requests retrieves and expands the shared folder assets. The request then filters the children assets and returns the specified <code>$select</code> value from children assets matching the specified <code>$filter</code> value. A <code>$select</code> option is also applied to the shared folder and returns the specified <code>$select</code> value for the folder.</p>
+<h3 id='syntax-7'>Syntax</h3>
+<p><code>http://&lt;Planning Analytics Workspace server URL&gt;:&lt;port number&gt;/pacontent/v1/Assets(path=&#39;&lt;folder path&gt;&#39;)?$expand=Assets($select=&lt;select type&gt;;$filter=&lt;filter type&gt; &lt;filter condition&gt; &#39;&lt;filter value&gt;&#39;)&amp;$select=&lt;select type&gt;</code></p>
+
+<ul>
+<li>The <code>$expand=Assets</code> option expands the assets of the shared folder.</li>
+<li>The <code>$select=id</code> option returns only the <code>id</code> value of the expanded children assets.</li>
+<li>The <code>$filter=name</code> option returns only children assets with a <code>name</code> value of <code>demo</code>.</li>
+<li>The <code>$select=name eq &#39;demo&#39;</code> option returns only the <code>name</code> value for the shared folder.</li>
+</ul>
+
+<table><thead>
+<tr>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Planning Analytics Workspace server URL</td>
+<td>The URL for the Planning Analytics Workspace server that your asset is located in.</td>
+</tr>
+<tr>
+<td>Port number</td>
+<td>The port number used for your server URL.</td>
+</tr>
+<tr>
+<td>Folder path</td>
+<td>The path of the folder where your assets are located in.</td>
+</tr>
+<tr>
+<td>Filter type</td>
+<td>The type of data that you want to filter the children by.</td>
+</tr>
+<tr>
+<td>Filter condition</td>
+<td>Set to <code>eq</code> to filter the children based on the <code>equals</code> filter condition.</td>
+</tr>
+<tr>
+<td>Filter value</td>
+<td>The value that you want to filter the children on.</td>
+</tr>
+<tr>
+<td>Select type</td>
+<td>The type of data that you want to select by.</td>
+</tr>
+</tbody></table>
+
+<aside class="note">
+Note: The path of your folder must be URL encoded twice.
+</aside>
+<h3 id='result-7'>Result</h3>
+<blockquote>
+<p>Example of a response from a successful request</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"@odata.context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost.fyre.ibm.com:1338/v1/$metadata#Assets(name)/$entity"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"@odata.id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:1338/v1/Assets('c2c24d17-8abb-478e-a2e5-c2853cdae81a')"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"@odata.editLink"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:1338/v1/Assets('c2c24d17-8abb-478e-a2e5-c2853cdae81a')"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"shared"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Assets"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"demo"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h2 id='get-filter-select-and-expand-assets'>Get, filter, select, and expand assets</h2>
+<blockquote>
+<p>Example of the syntax:</p>
+</blockquote>
+<pre class="highlight html tab-html"><code>http://localhost:1338/pacontent/v1/Assets(path='%252Fshared')?$expand=Assets($select=id,type,path;$expand=content;$filter=name eq 'demo')
+</code></pre>
+<p>This GET requests retrieves and expands the shared folder assets. The request then filters the children assets and returns the specified <code>$select</code> value from children assets matching the specified <code>$filter</code> value. A <code>$select</code> option is also applied to the shared folder and returns the specified <code>$select</code> value for the folder.</p>
+
+<p>Unlike the previous example, this request also expands the content of the returned children assets by using the <code>$expand=content</code> option.</p>
+<h3 id='syntax-8'>Syntax</h3>
+<p><code>http://&lt;Planning Analytics Workspace server URL&gt;:&lt;port number&gt;/pacontent/v1/Assets(path=&#39;&lt;folder path&gt;&#39;)?$expand=Assets($select=&lt;select type&gt;;$filter=&lt;filter type&gt; &lt;filter condition&gt; &#39;&lt;filter value&gt;&#39;)&amp;$select=&lt;select type&gt;</code></p>
+
+<ul>
+<li>The <code>$expand=Assets</code> option expands the assets of the shared folder.</li>
+<li>The <code>$select=id</code> option returns only the <code>id</code> value of the expanded children assets.</li>
+<li>The <code>$filter=name</code> option returns only children assets with a <code>name</code> value of <code>demo</code>.</li>
+<li>The <code>$select=name eq &#39;demo&#39;</code> option returns only the <code>name</code> value for the shared folder.</li>
+</ul>
+
+<table><thead>
+<tr>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Planning Analytics Workspace server URL</td>
+<td>The URL for the Planning Analytics Workspace server that your asset is located in.</td>
+</tr>
+<tr>
+<td>Port number</td>
+<td>The port number used for your server URL.</td>
+</tr>
+<tr>
+<td>Folder path</td>
+<td>The path of the folder where your assets are located in.</td>
+</tr>
+<tr>
+<td>Filter type</td>
+<td>The type of data that you want to filter the children by.</td>
+</tr>
+<tr>
+<td>Filter condition</td>
+<td>Set to <code>eq</code> to filter the children based on the <code>equals</code> filter condition.</td>
+</tr>
+<tr>
+<td>Filter value</td>
+<td>The value that you want to filter the children on.</td>
+</tr>
+<tr>
+<td>Select type</td>
+<td>The type of data that you want to select by.</td>
+</tr>
+</tbody></table>
+
+<aside class="note">
+Note: The path of your folder must be URL encoded twice.
+</aside>
+<h3 id='result-8'>Result</h3>
+<blockquote>
+<p>Example of a response from a successful request</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"@odata.context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:1338/v1/$metadata#Assets/$entity"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"@odata.id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:1338/v1/Assets('c2c24d17-8abb-478e-a2e5-c2853cdae81a')"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"@odata.editLink"</span><span class="p">:</span><span class="w"> </span><span class="s2">"localhost:1338/v1/Assets('c2c24d17-8abb-478e-a2e5-c2853cdae81a')"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c2c24d17-8abb-478e-a2e5-c2853cdae81a"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"shared"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/shared"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"folder"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c#info"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"valid"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"system_properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-07-25T15:24:42.304Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_user_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_user_pretty_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"modified_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-07-25T15:24:42.304Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"modified_user_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"modified_user_pretty_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"used_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-07-25T15:24:42.304Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"used_user_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"used_user_pretty_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"permissions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"open"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"write"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"manage"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"secure"</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"dynamic_properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"delete_link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"idvisualizations/r/v2/content/shared/"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"thumbnail_link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"idvisualizations/r/v2/attachment/shared/?name=thumbnail"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"custom_properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"NATURE"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SYSTEM"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"WA_PRO_READY"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"Assets"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"@odata.id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:1338/v1/Assets('0985d8bf-6fb2-42d8-a31d-5a312f43e18c')"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"@odata.editLink"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:1338/v1/Assets('0985d8bf-6fb2-42d8-a31d-5a312f43e18c')"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0985d8bf-6fb2-42d8-a31d-5a312f43e18c"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/shared/demo"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dashboard"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"C"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"filter"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+                </span><span class="s2">"calculation"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+                </span><span class="s2">"querySubject"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+                </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6.0"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"dataSource"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+                </span><span class="s2">"useSpec"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h1 id='del-requests'>DEL requests</h1>
+<p>You can use DEL requests to delete an asset in Planning Analytics Workspace.</p>
+<h2 id='delete-an-asset-by-id'>Delete an asset by ID</h2>
+<blockquote>
+<p>Example of the syntax:</p>
+</blockquote>
+<pre class="highlight html tab-html"><code>http://localhost:1338/pacontent/v1/Assets(id='0985d8bf-6fb2-42d8-a31d-5a312f43e18c',type='dashboard')
+</code></pre>
+<p>This DEL request locates and deletes an asset based on the asset ID and asset type.</p>
+<h3 id='syntax'>Syntax</h3>
+<p><code>http://&lt;Planning Analytics Workspace server URL&gt;:&lt;port number&gt;/pacontent/v1/Assets(&#39;&lt;asset ID&gt;&#39;, type=&#39;&lt;asset type&gt;&#39;)</code></p>
+
+<table><thead>
+<tr>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Planning Analytics Workspace server URL</td>
+<td>The URL for the Planning Analytics Workspace server that your asset is located in.</td>
+</tr>
+<tr>
+<td>Port number</td>
+<td>The port number used for your server URL.</td>
+</tr>
+<tr>
+<td>Asset ID</td>
+<td>The ID for the asset.</td>
+</tr>
+<tr>
+<td>Asset type</td>
+<td>The type of asset.</td>
+</tr>
+</tbody></table>
+<h3 id='result'>Result</h3>
+<p>The asset with the provided asset ID and type is deleted from Planning Analytics Workspace.</p>
+<h2 id='delete-an-asset-by-path'>Delete an asset by path</h2>
+<blockquote>
+<p>Example of the syntax:</p>
+</blockquote>
+<pre class="highlight html tab-html"><code>http://localhost:1338/pacontent/v1/Assets(path='%252Fshared%252Fdemo')
+</code></pre><h3 id='syntax-2'>Syntax</h3>
+<p><code>http://&lt;Planning Analytics Workspace server URL&gt;:&lt;port number&gt;/pacontent/v1/Assets(path=&#39;&lt;asset path&gt;&#39;)</code></p>
+
+<table><thead>
+<tr>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Planning Analytics Workspace server URL</td>
+<td>The URL for the Planning Analytics Workspace server that your asset is located in.</td>
+</tr>
+<tr>
+<td>Port number</td>
+<td>The port number used for your server URL.</td>
+</tr>
+<tr>
+<td>Asset path</td>
+<td>The path of the asset.</td>
+</tr>
+</tbody></table>
+<h3 id='result-2'>Result</h3>
+<p>The asset located in the provided path is deleted from Planning Analytics Workspace.</p>
+<h1 id='put-requests'>PUT requests</h1>
+<p>You can use PUT requests to update an asset in Planning Analytics Workspace.</p>
+<h2 id='update-an-asset-using-the-asset-id-and-type'>Update an asset using the asset ID and type</h2>
+<blockquote>
+<p>Example:</p>
+</blockquote>
+<pre class="highlight html tab-html"><code>http://localhost:1338/pacontent/v1/Assets(id='196bf85d-329c-40ec-bb43-5098176197dd',type='dashboard')?$expand=content
+</code></pre><h3 id='syntax'>Syntax</h3>
+<p><code>http://&lt;Planning Analytics Workspace server URL&gt;:&lt;port number&gt;/pacontent/v1/Assets(id=&#39;&lt;asset ID&gt;&#39;,type=&#39;asset type&#39;)?$expand=content</code></p>
+
+<table><thead>
+<tr>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Planning Analytics Workspace server URL</td>
+<td>The URL for the Planning Analytics Workspace server that your asset is located in.</td>
+</tr>
+<tr>
+<td>Port number</td>
+<td>The port number used for your server URL.</td>
+</tr>
+<tr>
+<td>Asset ID</td>
+<td>The ID for the asset.</td>
+</tr>
+<tr>
+<td>Asset type</td>
+<td>The type of asset.</td>
+</tr>
+</tbody></table>
+<h3 id='body'>Body</h3>
+<blockquote>
+<p>Example of the request body</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7.0"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"container"</span><span class="p">:</span><span class="w"> </span><span class="s2">"C"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"useSpec"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"dataSource"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"querySubject"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"filter"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"calculation"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"custom_properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='result'>Result</h3>
+<blockquote>
+<p>Example of a response from a successful request</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/shared/demo"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"dynamic_properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"delete_link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"idvisualizations/c/v2/content/dashboard/297df01f-debf-401f-8d4e-67a7b3c7b01e/"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"extended_info_link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"idvisualizations/c/v2/info/dashboard/297df01f-debf-401f-8d4e-67a7b3c7b01e/?view=extended_info"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"thumbnail_link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"idvisualizations/c/v2/attachment/dashboard/297df01f-debf-401f-8d4e-67a7b3c7b01e/?name=thumbnail"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"open_link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gemini/board/297df01f-debf-401f-8d4e-67a7b3c7b01e/?embed=ba1"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"system_properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"used_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-05-12T20:24:41.356Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"used_user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d39c9bbe4b0e222859a1452"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"used_user_pretty_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Admin"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"attachments"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"created_user_pretty_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Admin"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"permissions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"open"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"write"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"manage"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"secure"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"created_user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d39c9bbe4b0e222859a1452"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"modified_user_pretty_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Admin"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"modified_user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d39c9bbe4b0e222859a1452"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-05-12T20:24:22.555Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"modified_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-05-12T20:24:41.367Z"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c#info"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"demo"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"297df01f-debf-401f-8d4e-67a7b3c7b01e"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"valid"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"custom_properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dashboard"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>The asset is updated with the specified values.</p>
+
+      </div>
+      <div class="dark-box">
+      </div>
+    </div>
+  </body>
+</html>
