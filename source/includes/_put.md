@@ -1,5 +1,5 @@
 # PUT requests
-You can use PUT requests to update an asset in Planning Analytics Workspace.
+You can use PUT requests to update an asset's `custom_properties` or `content` properties in Planning Analytics Workspace.
 
 ## Update an asset using the asset ID and type
 
