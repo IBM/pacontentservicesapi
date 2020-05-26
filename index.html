@@ -334,17 +334,6 @@
 <h2 id='ba-sso-authenticity'>ba-sso-authenticity</h2>
 <p>The <code>ba-sso-authenticity</code> is the Business Analytics single sign-on authentication value. The value can be found in your cookies, under the name <code>ba-sso-csrf</code>.</p>
 <h2 id='cookie'>cookie</h2>
-<blockquote>
-<p>Example of the redirect javascript:</p>
-</blockquote>
-<pre class="highlight html"><code><span class="nt">&lt;html&gt;</span>
-    <span class="nt">&lt;head&gt;</span>
-        <span class="nt">&lt;script&gt;</span>
-            <span class="nb">document</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">replace</span> <span class="o">|</span> <span class="nx">GET</span> <span class="nx">THIS</span> <span class="nx">EXAMPLE</span> <span class="nx">FROM</span> <span class="nx">JACKSON</span>
-        <span class="nt">&lt;/script&gt;</span>
-    <span class="nt">&lt;/head&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre>
 <p>The <code>cookie</code> is the client-side cookie for Planning Analytics Workspace. Cookies must be defined, otherwise your request will not be authenticated. You can use a javascript file to redirect you to the login page. After you log in, your cookies will be set in the browser. </p>
 
 <p>The value can be found in your cookies, by combining <code>wa-current-userid</code>, <code>ba-sso-csrf</code> and <code>paSession</code>.</p>
@@ -381,19 +370,21 @@
 </tr>
 <tr>
 <td>name</td>
-<td>The asset name</td>
+<td>The asset name.</td>
 </tr>
 <tr>
 <td>path</td>
-<td>The asset path</td>
+<td>The asset path.</td>
 </tr>
 <tr>
 <td>content</td>
-<td>Lorem ipsum</td>
+<td>The <code>content</code> property of the asset that you want to add or modify. The <code>content</code> parameter can be expanded to reveal an array of nested parameters in an asset. You can add or modify the parameters in this array. Parameters in the <code>content</code> property may differ between asset types.</td>
+</tr>
+<tr>
+<td>custom_properties</td>
+<td>The <code>custom_properties</code> property of the asset that you want to add or modify. You can use <code>custom_properties</code> for any custom values that you would like to store in the asset.</td>
 </tr>
 </tbody></table>
-
-<p>custom_properties Lorem ipsum</p>
 <h1 id='supported-odata-query-options'>Supported OData query options</h1>
 <p>The Planning Analytics Content Services API supports several OData query options. These query options can be used to refine your requests.</p>
 <h2 id='expand'>$expand</h2>
@@ -403,7 +394,7 @@
 
 <p>For example, <code>http://localhost:1338/pacontent/v1/Assets(&#39;94d80e2b-8285-4926-9d37-08f5f32f9b68&#39;)?$expand=content</code> expands and returns the <code>content</code> property from the asset.</p>
 <h2 id='filter'>$filter</h2>
-<p>You can use <code>$filter</code> with an operator to filter the retrieved JSON properties. <code>$filter</code> can only be used with <code>$expand</code> for expanded assets.</p>
+<p>You can use <code>$filter</code> with an operator to filter the retrieved JSON properties. <code>$filter</code> can be used only with <code>$expand</code> for expanded assets.</p>
 
 <p>For example, <code>$filter=name eq finance</code> returns only assets with <code>finance</code> in the <code>name</code> property.</p>
 
@@ -461,23 +452,12 @@
 <td>and</td>
 <td>The <code>and</code> operator returns true if both the left and right operands evaluate to true, otherwise it returns false.</td>
 </tr>
-<tr>
-<td>or</td>
-<td>The <code>or</code> operator returns false if both the left and right operands both evaluate to false, otherwise it returns true.</td>
-</tr>
-<tr>
-<td>not</td>
-<td>The <code>not</code> operator returns true if the operand returns false, otherwise it returns false.</td>
-</tr>
-<tr>
-<td>has</td>
-<td>The <code>has</code> operator returns true if the right operand is an enumeration value whose flag(s) are set on the left operand.</td>
-</tr>
-<tr>
-<td>in</td>
-<td>The <code>in</code> operator returns true if the left operand is a member of the right operand. The right operand MUST be either a comma-separated list of primitive values, enclosed in parentheses, or a single expression that resolves to a collection.</td>
-</tr>
 </tbody></table>
+
+<!--or | The `or` operator returns false if both the left and right operands both evaluate to false, otherwise it returns true.
+not | The `not` operator returns true if the operand returns false, otherwise it returns false.
+has | The `has` operator returns true if the right operand is an enumeration value whose flag(s) are set on the left operand.
+in | The `in` operator returns true if the left operand is a member of the right operand. The right operand MUST be either a comma-separated list of primitive values, enclosed in parentheses, or a single expression that resolves to a collection. -->
 <h1 id='post-requests'>POST requests</h1>
 <p>You can use POST requests to send data to the Planning Analytics server and create assets in Planning Analytics Workspace.</p>
 <h2 id='creating-a-folder'>Creating a folder</h2>
