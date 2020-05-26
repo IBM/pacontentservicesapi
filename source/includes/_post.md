@@ -45,9 +45,9 @@ name | The name that you want to give your asset.
 
 ```json
 {
-    "@odata.context": "http://harmonydev21.fyre.ibm.com:1338/v1/$metadata#Assets/$entity",
-    "@odata.id": "http://harmonydev21.fyre.ibm.com:1338/v1/Assets('46aabf88-bdf2-4b1d-a150-00e31ef804ea')",
-    "@odata.editLink": "http://harmonydev21.fyre.ibm.com:1338/v1/Assets('46aabf88-bdf2-4b1d-a150-00e31ef804ea')",
+    "@odata.context": "http://localhost:1338/v1/$metadata#Assets/$entity",
+    "@odata.id": "http://localhost:1338/v1/Assets('46aabf88-bdf2-4b1d-a150-00e31ef804ea')",
+    "@odata.editLink": "localhost:1338/v1/Assets('46aabf88-bdf2-4b1d-a150-00e31ef804ea')",
     "id": "46aabf88-bdf2-4b1d-a150-00e31ef804ea",
     "description": "",
     "name": "demo",
@@ -137,9 +137,9 @@ Note: The `content` key and values are required to create a dashboard.
 
 ```json
 {
-    "@odata.context": "http://harmonydev21.fyre.ibm.com:1338/v1/$metadata#Assets/$entity",
-    "@odata.id": "http://harmonydev21.fyre.ibm.com:1338/v1/Assets('0985d8bf-6fb2-42d8-a31d-5a312f43e18c')",
-    "@odata.editLink": "http://harmonydev21.fyre.ibm.com:1338/v1/Assets('0985d8bf-6fb2-42d8-a31d-5a312f43e18c')",
+    "@odata.context": "http://localhost:1338/v1/$metadata#Assets/$entity",
+    "@odata.id": "http://localhost:1338/v1/Assets('0985d8bf-6fb2-42d8-a31d-5a312f43e18c')",
+    "@odata.editLink": "http://localhost:1338/v1/Assets('0985d8bf-6fb2-42d8-a31d-5a312f43e18c')",
     "id": "0985d8bf-6fb2-42d8-a31d-5a312f43e18c",
     "description": "",
     "name": "demo",
