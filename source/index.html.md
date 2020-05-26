@@ -34,18 +34,6 @@ The `ba-sso-authenticity` is the Business Analytics single sign-on authenticatio
 
 ## cookie
 
-> Example of the redirect javascript:
-
-```
-<html>
-    <head>
-        <script>
-            document.location.replace | GET THIS EXAMPLE FROM JACKSON
-        </script>
-    </head>
-</html>
-```
-
 The `cookie` is the client-side cookie for Planning Analytics Workspace. Cookies must be defined, otherwise your request will not be authenticated. You can use a javascript file to redirect you to the login page. After you log in, your cookies will be set in the browser. 
 
 The value can be found in your cookies, by combining `wa-current-userid`, `ba-sso-csrf` and `paSession`.

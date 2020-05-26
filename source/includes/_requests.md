@@ -19,10 +19,10 @@ The Planning Analytics Content Service API accepts and returns requests in JSON.
 Parameter name | Description
 ---------- | ------- 
 type | The asset type.
-name | The asset name
-path | The asset path 
-content | Lorem ipsum
-custom_properties Lorem ipsum
+name | The asset name.
+path | The asset path.
+content | The `content` property of the asset that you want to add or modify. The `content` parameter can be expanded to reveal an array of nested parameters in an asset. You can add or modify the parameters in this array. Parameters in the `content` property may differ between asset types.
+custom_properties | The `custom_properties` property of the asset that you want to add or modify. You can use `custom_properties` for any custom values that you would like to store in the asset.
 
 
 # Supported OData query options
@@ -39,7 +39,7 @@ For example, `http://localhost:1338/pacontent/v1/Assets('94d80e2b-8285-4926-9d37
 
 ## $filter
 
-You can use `$filter` with an operator to filter the retrieved JSON properties. `$filter` can only be used with `$expand` for expanded assets.
+You can use `$filter` with an operator to filter the retrieved JSON properties. `$filter` can be used only with `$expand` for expanded assets.
 
 For example, `$filter=name eq finance` returns only assets with `finance` in the `name` property.
 
@@ -83,7 +83,8 @@ ge | The `ge` operator returns true if the left operand is greater than or equal
 lt | The `lt` operator returns true if the left operand is less than the right operand, otherwise it returns false.
 le | The `le` operator returns true if the left operand is less than or equal to the right operand, otherwise it returns false.
 and | The `and` operator returns true if both the left and right operands evaluate to true, otherwise it returns false.
-or | The `or` operator returns false if both the left and right operands both evaluate to false, otherwise it returns true.
+
+<!--or | The `or` operator returns false if both the left and right operands both evaluate to false, otherwise it returns true.
 not | The `not` operator returns true if the operand returns false, otherwise it returns false.
 has | The `has` operator returns true if the right operand is an enumeration value whose flag(s) are set on the left operand.
-in | The `in` operator returns true if the left operand is a member of the right operand. The right operand MUST be either a comma-separated list of primitive values, enclosed in parentheses, or a single expression that resolves to a collection.
+in | The `in` operator returns true if the left operand is a member of the right operand. The right operand MUST be either a comma-separated list of primitive values, enclosed in parentheses, or a single expression that resolves to a collection. -->
